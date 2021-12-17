@@ -1,103 +1,116 @@
-@font-face {
-  font-family: "hk_groteskblack";
-  src: url("hkgrotesk-black-webfont.woff2") format("woff2"),
-    url("hkgrotesk-black-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+// * Variables *//
+//Font Weights
+$light: 400;
+$regular: 500;
+$bold: 700;
+
+//Colors
+$white: #ffffff;
+$off-white: #f5f5f5;
+$bg-blue: #f3faff;
+$light-blue: #d5e3e8;
+$blue: #1e5b6d;
+$dark-blue: #19424e;
+$button-blue: #387b8e;
+$orange: #f5761a;
+
+//Mix-ins
+@mixin fluid-typography($minFont, $maxFont, $minBreakpoint, $maxBreakpoint) {
+  /* Define variable for media query */
+  $maxLessOne: $maxBreakpoint - 1;
+
+  /* Define variable for fallback */
+  $avg: ($maxFont + $minFont) / 2;
+
+  /* Base font size */
+  font-size: #{$minFont}px;
+
+  @media (min-width: #{$minBreakpoint}px) and (max-width: #{$maxLessOne}px) {
+    /* Adds a fallback for unsupported browsers */
+    font-size: #{$avg}px;
+
+    font-size: calc(
+      #{$minFont}px + (#{$maxFont} - #{$minFont}) *
+        (100vw - #{$minBreakpoint}px) / (#{$maxBreakpoint} - #{$minBreakpoint})
+    );
+  }
+
+  @media (min-width: #{$maxBreakpoint}px) {
+    font-size: #{$maxFont}px;
+  }
 }
 
-@font-face {
-  font-family: "hk_groteskbold";
-  src: url("hkgrotesk-bold-webfont.woff2") format("woff2"),
-    url("hkgrotesk-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+// * Global Styles * //
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-@font-face {
-  font-family: "hk_groteskbold_italic";
-  src: url("hkgrotesk-bolditalic-webfont.woff2") format("woff2"),
-    url("hkgrotesk-bolditalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hk_groteskextrabold";
-  src: url("hkgrotesk-extrabold-webfont.woff2") format("woff2"),
-    url("hkgrotesk-extrabold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hk_groteskitalic";
-  src: url("hkgrotesk-italic-webfont.woff2") format("woff2"),
-    url("hkgrotesk-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hk_grotesklight";
-  src: url("hkgrotesk-light-webfont.woff2") format("woff2"),
-    url("hkgrotesk-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hk_grotesklight_italic";
-  src: url("hkgrotesk-lightitalic-webfont.woff2") format("woff2"),
-    url("hkgrotesk-lightitalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hk_groteskmedium";
-  src: url("hkgrotesk-medium-webfont.woff2") format("woff2"),
-    url("hkgrotesk-medium-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hk_groteskmedium_italic";
-  src: url("hkgrotesk-mediumitalic-webfont.woff2") format("woff2"),
-    url("hkgrotesk-mediumitalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hk_groteskregular";
-  src: url("hkgrotesk-regular-webfont.woff2") format("woff2"),
-    url("hkgrotesk-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hk_grotesksemibold";
-  src: url("hkgrotesk-semibold-webfont.woff2") format("woff2"),
-    url("hkgrotesk-semibold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "hk_grotesksemibold_italic";
-  src: url("hkgrotesk-semibolditalic-webfont.woff2") format("woff2"),
-    url("hkgrotesk-semibolditalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+html {
+  scroll-behavior: smooth;
+  @include fluid-typography(16, 25, 300, 1500);
 }
 
 body {
-  font-family: "hk_groteskregular", sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-family: "DM Sans", sans-serif;
   color: black;
-  background-color: aquamarine;
+  background-color: $bg-blue;
+}
+
+// * Navbar * //
+#icon {
+  font-weight: $bold;
+  color: $off-white;
+  font-size: 1.1rem;
+  span {
+    color: $orange;
+  }
+}
+.nav-item {
+  font-size: 1rem !important;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0);
+}
+.navbar-nav {
+  padding-top: 0.3rem;
+}
+
+.navActive {
+  background-color: $blue !important;
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.1rem !important;
+  box-shadow: 0px 5px 23px 0px #16191e !important;
+  transition: all 300ms ease-in;
+}
+.navbar {
+  background-color: transparent;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0px 0px 0px 0px #16191e;
+  transition: background-color 250ms ease-out, padding-top 250ms ease-out,
+    padding-bottom 250ms ease-out, box-shadow 100ms ease-out;
+}
+
+// ** Hero ** //
+.hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("../img/s-migaj-Yui5vfKHuzs-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
