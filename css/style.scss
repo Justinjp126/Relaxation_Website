@@ -83,6 +83,7 @@ body {
   font-family: "DM Sans", sans-serif;
   color: black;
   background-color: $bg-blue;
+  overflow-x: hidden;
 }
 
 h1,
@@ -132,6 +133,10 @@ p {
   transition: background-color 250ms ease-out, padding-top 250ms ease-out,
     padding-bottom 250ms ease-out, box-shadow 100ms ease-out;
 }
+
+// !!!!!!!!!!!!!!!!! //
+// !!! Home Page !!! //
+// !!!!!!!!!!!!!!!!! //
 
 // ** Hero ** //
 .hero {
@@ -401,13 +406,109 @@ p {
       brightness(98%) contrast(103%);
     width: 1.25rem;
     margin-left: 0.75rem;
-    transition: width 200ms ease-out;
   }
-  &__twitter:hover,
-  &__instagram:hover,
-  &__twitter:focus,
-  &__instagram:focus {
-    width: 1.3rem;
-    transition: width 250ms ease-in;
+}
+
+// !!!!!!!!!!!!!!!!! //
+// !!! About Page !!! //
+// !!!!!!!!!!!!!!!!! //
+
+// ** Mission Statement ** //
+.mission {
+  background-color: $bg-blue;
+  padding-top: 5rem;
+  &__title {
+    color: $dark-blue;
+    font-size: 6rem;
+    font-weight: $bold;
+  }
+  &__text {
+    color: $blue;
+    font-size: 0.8rem;
+    font-weight: $light;
+    padding-left: 1rem;
+    max-width: 75ch;
+  }
+}
+
+// ** Instructors ** //
+.instructors {
+  background-color: $bg-blue;
+  padding-top: 2rem;
+  &__title {
+    color: rgba(#255968, 0.06);
+    font-size: 12rem;
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    z-index: 1;
+  }
+  &__woman {
+    position: relative;
+    z-index: 10;
+    padding-top: 8rem;
+    &_image {
+      width: 90%;
+      object-fit: contain;
+      height: auto;
+    }
+    &_name {
+      color: $dark-blue;
+      font-size: 2rem;
+      font-weight: $regular;
+      margin-left: -1rem;
+    }
+    &_text {
+      padding-top: 0.5rem;
+      color: $blue;
+      font-size: 0.7rem;
+      font-weight: $light;
+    }
+    &_email {
+      padding-top: 0.5rem;
+      color: $blue;
+      font-size: 0.7rem;
+      font-weight: $light;
+      text-decoration: underline;
+    }
+    &_email:hover,
+    &_email:focus {
+      color: $dark-blue;
+      transition: color 200ms ease-in;
+    }
+  }
+  &__man {
+    position: relative;
+    z-index: 10;
+    padding-top: 3rem;
+    &_image {
+      width: 80%;
+      height: auto;
+      object-fit: contain;
+    }
+    &_name {
+      color: $dark-blue;
+      font-size: 2rem;
+      font-weight: $regular;
+      margin-left: -1rem;
+    }
+    &_text {
+      padding-top: 0.5rem;
+      color: $blue;
+      font-size: 0.7rem;
+      font-weight: $light;
+    }
+    &_email {
+      padding-top: 0.5rem;
+      color: $blue;
+      font-size: 0.7rem;
+      font-weight: $light;
+      text-decoration: underline;
+    }
+    &_email:hover,
+    &_email:focus {
+      color: $dark-blue;
+      transition: color 200ms ease-in;
+    }
   }
 }
