@@ -15,6 +15,7 @@ $light-blue: #d5e3e8;
 $blue: #1e5b6d;
 $dark-blue: #19424e;
 $button-blue: #387b8e;
+$update-blue: #d5e3e8;
 $light-purple: #e6e6fa;
 $dark-purple: #42498f;
 //Mix-ins
@@ -510,5 +511,101 @@ p {
       color: $dark-blue;
       transition: color 200ms ease-in;
     }
+    &_fix {
+      margin-right: -2rem;
+    }
+  }
+}
+
+// ** Updates Section ** //
+.updates {
+  padding: 2rem 0;
+  &__title {
+    color: $dark-blue;
+    font-size: 3.5rem;
+    font-weight: $regular;
+  }
+  &__bg {
+    background-color: $update-blue;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 1rem 0;
+  }
+  &__date {
+    color: $dark-blue;
+    font-size: 0.9rem;
+  }
+  &__text {
+    color: $dark-blue;
+    font-size: 0.9rem;
+    &_link {
+      text-decoration: underline;
+      color: inherit;
+    }
+    &_link:hover,
+    &_link:focus {
+      color: $dark-blue;
+      transition: color 200ms ease-in;
+    }
+  }
+}
+
+// ** Interested Section ** //
+.interested {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(19, 20, 20, 0.3),
+      rgba(19, 20, 20, 0.3)
+    ),
+    url(../img/starry_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__container {
+    padding: 4rem 0 3rem;
+  }
+  &__title {
+    color: #52add5;
+    font-size: 4rem;
+    font-weight: $bold;
+    padding-bottom: 2rem;
+  }
+  &__button {
+    color: $off-white;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: $regular;
+    border-radius: 100px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #52add5;
+    outline: none;
+    border: none;
+    font-size: 0.9rem;
+    width: 10rem;
+    padding: 0.2rem 0;
+    transition: background-color 200ms ease-out;
+    margin: 0 3rem;
+    &:hover,
+    &:focus {
+      color: $off-white;
+      background-color: darken(#52add5, 10%);
+      transition: background-color 250ms ease-in;
+    }
+  }
+
+  #about-footer {
+    padding-bottom: 1rem;
+  }
+
+  #about-footer-text {
+    margin-top: 1.5rem;
+    color: $off-white;
+  }
+  #about-footer-img {
+    margin-top: 1.65rem;
+    filter: invert(99%) sepia(4%) saturate(1123%) hue-rotate(239deg)
+      brightness(115%) contrast(92%);
   }
 }
