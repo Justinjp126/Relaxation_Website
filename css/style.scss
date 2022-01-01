@@ -478,7 +478,8 @@ p {
     padding-top: 8rem;
     &_image {
       width: 90%;
-      object-fit: contain;
+      object-fit: cover;
+      border-radius: 0.75rem;
       height: auto;
     }
     &_name {
@@ -513,7 +514,8 @@ p {
     &_image {
       width: 90%;
       height: auto;
-      object-fit: contain;
+      object-fit: cover;
+      border-radius: 0.75rem;
     }
     &_name {
       color: $dark-blue;
