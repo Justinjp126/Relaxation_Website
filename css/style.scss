@@ -97,14 +97,28 @@ p {
 // * Navbar * //
 #icon {
   font-weight: $bold;
-  color: $off-white;
+  color: $dark-blue;
   font-size: 1.1rem;
   span {
-    color: $light-purple;
+    color: $dark-purple;
   }
 }
-.nav-item {
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show > .nav-link {
   font-size: 0.9rem !important;
+  color: darken($dark-blue, 10%);
+}
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: darken($dark-blue, 10%);
+  transition: all 200ms ease-in;
+}
+.navbar-dark .navbar-nav .nav-link {
+  font-size: 0.9rem !important;
+  color: $dark-blue;
+}
+.nav-link .active {
+  color: $dark-blue;
 }
 .navbar-toggler:focus,
 .navbar-toggler:active,
@@ -120,11 +134,12 @@ p {
 }
 
 .navActive {
-  background-color: $blue !important;
+  background-color: $bg-blue !important;
+  color: $dark-blue !important;
   padding-top: 0.1rem !important;
-  padding-bottom: 0.1rem !important;
+  padding-bottom: 0.2rem !important;
   box-shadow: 0px 5px 23px 0px #16191e !important;
-  transition: all 300ms ease-in;
+  transition: all 250ms ease-in;
 }
 .navbar {
   background-color: transparent;
@@ -134,7 +149,20 @@ p {
   transition: background-color 250ms ease-out, padding-top 250ms ease-out,
     padding-bottom 250ms ease-out, box-shadow 100ms ease-out;
 }
-
+.navActiveColor {
+  color: $dark-blue !important;
+  transition: all 250ms ease-in;
+}
+.navActiveColorPurple {
+  color: $dark-purple !important;
+  transition: all 250ms ease-in;
+}
+.white {
+  color: $off-white !important;
+}
+.light-white {
+  color: #c9c9c9 !important;
+}
 // !!!!!!!!!!!!!!!!! //
 // !!! Home Page !!! //
 // !!!!!!!!!!!!!!!!! //
@@ -483,7 +511,7 @@ p {
     z-index: 10;
     padding-top: 3rem;
     &_image {
-      width: 80%;
+      width: 90%;
       height: auto;
       object-fit: contain;
     }
@@ -557,7 +585,7 @@ p {
       rgba(19, 20, 20, 0.3),
       rgba(19, 20, 20, 0.3)
     ),
-    url(../img/starry_bg.png);
+    url(../img/starry_bg-min.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
