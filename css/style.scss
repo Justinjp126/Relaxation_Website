@@ -639,3 +639,45 @@ p {
       brightness(115%) contrast(92%);
   }
 }
+
+// !!!!!!!!!!!!!!!!! //
+// !!! Events Page !!! //
+// !!!!!!!!!!!!!!!!! //
+
+// ** Events Main Section ** //
+.eventsMain {
+  background-color: $bg-blue;
+  position: relative;
+  padding-top: 17%;
+  &__title {
+    font-weight: $bold;
+    color: $dark-blue;
+    font-size: 4rem;
+    position: relative;
+    z-index: 10;
+  }
+  &__text {
+    font-weight: $light;
+    color: $blue;
+    font-size: 0.8rem;
+    position: relative;
+    z-index: 10;
+    max-width: 45ch;
+    padding-bottom: 1rem;
+  }
+  &__arrow {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    padding: 13px;
+    border: 2px solid $blue;
+  }
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+    height: 102vh;
+    z-index: 1;
+  }
+}
