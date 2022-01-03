@@ -53,11 +53,38 @@ function changeNav() {
 }
 
 /**
+ * Calendar popups
+ */
+function calenderSweetAlert() {
+  if (document.URL.includes("events.html")) {
+    var buttons = document.getElementsByClassName("calendar__button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener("click", function (evnt) {
+        var button = evnt.originalTarget;
+        var info = button.getAttribute("info");
+        var title = button.innerHTML;
+        Swal.fire({
+          title: title,
+          text: info,
+          iconColor: "#19424e",
+          color: "#19424e",
+          background: "#f3faff",
+          icon: "info",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#19424e",
+        });
+      });
+    }
+  }
+}
+
+/**
  * Calls function
  */
 
 function main() {
   changeNav();
+  calenderSweetAlert();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
