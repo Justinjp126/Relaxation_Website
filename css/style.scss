@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
 // * Variables *//
 //Font Weights
 $light: 400;
@@ -652,7 +651,7 @@ p {
   &__title {
     font-weight: $bold;
     color: $dark-blue;
-    font-size: 4rem;
+    font-size: 5rem;
     position: relative;
     z-index: 10;
   }
@@ -679,5 +678,126 @@ p {
     width: auto;
     height: 102vh;
     z-index: 1;
+  }
+}
+
+// ** Try It Section ** //
+.tryIt {
+  margin-top: 15rem;
+  background-color: #cce4ec;
+  padding: 4rem 0;
+  &__title {
+    color: #395a64;
+    font-size: 4rem;
+    font-weight: $light;
+  }
+  &__text {
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: $light;
+    color: #395a64;
+  }
+  &__button {
+    color: #1e3f48;
+    text-decoration: none;
+    font-size: 3rem;
+    transition: top ease 0.5s;
+    display: inline-block;
+    top: 0;
+    position: relative;
+    border-radius: 50%;
+    min-width: 17rem;
+    min-height: 17rem;
+    background: hsla(193, 42%, 56%, 1);
+
+    background: linear-gradient(
+      45deg,
+      hsla(193, 42%, 56%, 1) 0%,
+      hsla(193, 42%, 44%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+      45deg,
+      hsla(193, 42%, 56%, 1) 0%,
+      hsla(193, 42%, 44%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+      45deg,
+      hsla(193, 42%, 56%, 1) 0%,
+      hsla(193, 42%, 44%, 1) 100%
+    );
+
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  }
+  &__button:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 100%;
+    height: 0;
+  }
+  &__button:hover {
+    color: #1e3f48;
+    top: -5px;
+  }
+}
+
+// ** Calendar Section ** //
+.calendar {
+  padding: 3rem 0;
+  background-color: $bg-blue;
+  &__bg {
+    background-color: $update-blue;
+    border-radius: 0.75rem;
+    padding: 2rem 4rem;
+  }
+  &__title {
+    color: $dark-blue;
+    font-size: 4rem;
+    font-weight: $light;
+  }
+  &__text {
+    font-size: 0.9rem;
+    padding-left: 0.5rem;
+    color: $blue;
+    margin-bottom: 2rem;
+  }
+  &__time {
+    font-family: "Open Sans";
+    margin-bottom: 2em;
+    color: $dark-blue;
+    font-size: 1.1rem;
+  }
+  &__day {
+    font-family: "Open Sans";
+    margin-bottom: 4rem;
+    color: $dark-blue;
+    font-size: 1.1rem;
+  }
+  &__button {
+    font-family: "Open Sans";
+    text-transform: capitalize;
+    font-weight: $regular;
+    border-radius: 100px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $button-blue;
+    color: $off-white;
+    outline: none;
+    border: none;
+    font-size: 0.6rem;
+    width: 6rem;
+    height: 1.3rem;
+    transition: background-color 200ms ease-out;
+    &:hover,
+    &:focus {
+      color: $off-white;
+      background-color: darken($button-blue, 10%);
+      transition: background-color 250ms ease-in;
+    }
   }
 }
