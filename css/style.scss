@@ -760,7 +760,7 @@ p {
     font-weight: $light;
   }
   &__text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding-left: 0.5rem;
     color: $blue;
     margin-bottom: 2rem;
@@ -790,7 +790,7 @@ p {
     outline: none;
     border: none;
     font-size: 0.6rem;
-    width: 6rem;
+    width: 7rem;
     height: 1.3rem;
     transition: background-color 200ms ease-out;
     &:hover,
