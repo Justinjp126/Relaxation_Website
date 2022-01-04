@@ -801,3 +801,87 @@ p {
     }
   }
 }
+
+// !!!!!!!!!!!!!!!!! //
+// !!! Contact Page !!! //
+// !!!!!!!!!!!!!!!!! //
+.contact__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.contact {
+  color: white;
+  background-color: $dark-blue;
+  padding: 1rem;
+  width: 50%;
+  min-width: 19rem;
+  border-radius: 30px;
+  &__title {
+    font-weight: $regular;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $off-white;
+  }
+  &__name {
+    margin-bottom: 1rem;
+  }
+  &__email {
+    margin-bottom: 1rem;
+  }
+  &__message {
+    margin-bottom: 1rem;
+    &_message {
+      border-radius: 15px !important;
+    }
+  }
+  .form-control {
+    background-color: #14333d;
+    border: 1px solid #14333d;
+    color: white;
+    border-radius: 2rem;
+    width: 90%;
+    margin: 0;
+    padding: 0.15rem 0.65rem;
+    font-size: 0.9rem;
+    font-weight: $light;
+  }
+  .form-control::placeholder {
+    color: #acacac;
+    opacity: 1;
+  }
+  .form-control:focus {
+    border-color: #324377;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(#324377, 0.25) !important;
+  }
+  .was-validated .form-control:invalid,
+  .was-validated .form-control:invalid:focus,
+  .form-control:-moz-ui-invalid {
+    box-shadow: none;
+    outline: none;
+  }
+  &__button {
+    display: inline-block;
+    width: 4rem;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #14333d;
+    color: white;
+    text-align: center;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 100px;
+    padding: 0.05rem 0.5rem;
+    transition: background-color 200ms ease-out;
+    justify-content: flex-end;
+  }
+  &__button:hover,
+  &__button:focus {
+    color: white;
+    background-color: darken($dark-purple, 5%);
+    transition: background-color 250ms ease-in;
+  }
+}

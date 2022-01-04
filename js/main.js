@@ -79,6 +79,77 @@ function calenderSweetAlert() {
 }
 
 /**
+ * Checks if contact form info is valid
+ * and uses Sweet Alert for output
+ */
+function checkValidContact() {
+  var name = document.getElementById("nameContact").value;
+  var email = document.getElementById("emailContact").value;
+  var message = document.getElementById("messageContact").value;
+
+  if (name !== "" && validateEmail(email) && message !== "") {
+    Swal.fire({
+      title: "Success!",
+      text: "We will respond to your message as soon as possible!",
+      icon: "success",
+      confirmButtonText: "Continue",
+      iconColor: "#19424e",
+      color: "#19424e",
+      background: "#f3faff",
+      confirmButtonColor: "#19424e",
+    }).then((result) => {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      location.reload();
+    });
+  } else {
+    if (name == "") {
+      Swal.fire({
+        title: "Error!",
+        text: "Please fill out your name",
+        icon: "error",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#19424e",
+        iconColor: "#19424e",
+        color: "#19424e",
+        background: "#f3faff",
+      });
+    } else if (message == "") {
+      Swal.fire({
+        title: "Error!",
+        text: "Please fill out your message",
+        icon: "error",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#19424e",
+        iconColor: "#19424e",
+        color: "#19424e",
+        background: "#f3faff",
+      });
+    } else if (!validateEmail(email)) {
+      Swal.fire({
+        title: "Error!",
+        text: "Please enter valid email address",
+        icon: "error",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#19424e",
+        iconColor: "#19424e",
+        color: "#19424e",
+        background: "#f3faff",
+      });
+    }
+  }
+}
+
+/**
+ * Checks if email is valid
+ */
+function validateEmail(email) {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+/**
  * Calls function
  */
 

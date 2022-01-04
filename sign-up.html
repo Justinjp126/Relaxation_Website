@@ -11,14 +11,16 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>Home</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/main.js"></script>
+    <title>Sign-Up</title>
   </head>
   <body>
     <main>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="nav">
         <div class="container">
           <a class="navbar-brand" id="icon" href="index.html"
-            >dmc<span>.</span></a
+            >rw<span id=".">.</span></a
           >
           <button
             class="navbar-toggler"
@@ -37,19 +39,22 @@
           >
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">about</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="events.html">events</a>
-              </li>
-              <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  class="nav-link"
                   aria-current="page"
-                  href="sign-up.html"
+                  href="index.html"
+                  id="home"
+                  >home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html" id="about">about</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html" id="events">events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="sign-up.html" id="sign-up"
                   >sign-up</a
                 >
               </li>
@@ -57,16 +62,62 @@
           </div>
         </div>
       </nav>
-      <div class="container hero">
-        <div class="row">
-          <h1 class="hero__title">Relaxation Week</h1>
-          <p class="hero__subtitle">
-            We all need to relax sometimes. Join us in our week-long relaxation
-            marathon - with yoga, breathing exercises, and more.
-          </p>
-          <button class="hero__button">
-            <span class="hero__button_texts">Learn More</span>
-          </button>
+
+      <div class="container my-auto mx-auto contact__container">
+        <div class="contact">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="contact__title">Sign-Up</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center contact__name">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Name"
+                aria-label="name"
+                required
+                id="nameContact"
+                value=""
+                autocomplete=""
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 d-flex justify-content-center contact__email">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Email"
+                aria-label="email"
+                required
+                id="emailContact"
+                value=""
+                autocomplete=""
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col-lg-12 d-flex justify-content-center contact__message"
+            >
+              <textarea
+                class="form-control contact__message_message"
+                rows="3"
+                aria-label="message"
+                placeholder="Message"
+                id="messageContact"
+                value=""
+                autocomplete=""
+              ></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 d-flex justify-content-end">
+              <a class="contact__button" onclick="checkValidContact()">Send</a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
