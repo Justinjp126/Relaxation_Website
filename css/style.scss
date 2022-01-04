@@ -885,3 +885,63 @@ p {
     transition: background-color 250ms ease-in;
   }
 }
+
+// !!!!!!!!!!!!!!!!! //
+// !!! Demo Page !!! //
+// !!!!!!!!!!!!!!!!! //
+.demoBg {
+  background-color: #cce4ec;
+  height: 100vh;
+}
+.session {
+  padding-top: 6rem;
+  &__title {
+    text-align: center;
+    font-size: 4rem;
+    color: $blue;
+    font-weight: $regular;
+  }
+}
+.blob {
+  margin-top: 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__exercise {
+    background-image: url(/svg/exercise_bg2.svg);
+  }
+  &__yoga {
+    background-image: url(/svg/yoga_bg2.svg);
+  }
+  &__meditation {
+    background-image: url(/svg/meditation_bg2.svg);
+  }
+  &__exercise,
+  &__yoga,
+  &__meditation {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 7rem 3rem;
+    position: relative;
+    top: 0;
+    transition: 300ms ease-in top;
+    cursor: pointer;
+  }
+  &__exercise:hover,
+  &__yoga:hover,
+  &__meditation:hover,
+  &__exercise:focus,
+  &__yoga:focus,
+  &__meditation:focus {
+    top: -5px;
+  }
+  &__text {
+    color: $off-white;
+    font-weight: $regular;
+    font-size: 2rem;
+  }
+}
