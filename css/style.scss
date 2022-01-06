@@ -973,6 +973,53 @@ p {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    color: $blue;
+    font-weight: $regular;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .text10:hover {
+    color: darken($dark-blue, 5%);
+    transition: color 200ms ease-in;
+    cursor: default;
+  }
+  .text1 {
+    animation: fadeInAndOutAnimation 5s linear 10s 1 forwards;
+  }
+  .text2 {
+    animation: fadeInAndOutAnimation 3s linear 15s 1 forwards;
+  }
+  .text3 {
+    animation: fadeInAndOutAnimation 6s linear 18s 1 forwards;
+  }
+  .text4 {
+    animation: fadeInAndOutAnimation 5s linear 24s 1 forwards;
+  }
+  .text5 {
+    animation: fadeInAndOutAnimation 3s linear 29s 1 forwards;
+  }
+  .text6 {
+    animation: fadeInAndOutAnimation 6s linear 32s 1 forwards;
+  }
+  .text7 {
+    animation: fadeInAndOutAnimation 5s linear 38s 1 forwards;
+  }
+  .text8 {
+    animation: fadeInAndOutAnimation 3s linear 43s 1 forwards;
+  }
+  .text9 {
+    animation: fadeInAndOutAnimation 6s linear 46s 1 forwards;
+  }
+  .text10 {
+    animation: fadeInAnimation 3s linear 52s 1 forwards;
+  }
 
   @keyframes fadeInAnimation {
     0% {
