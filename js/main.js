@@ -59,8 +59,9 @@ function calenderSweetAlert() {
   if (document.URL.includes("events.html")) {
     var buttons = document.getElementsByClassName("calendar__button");
     for (var i = 0; i < buttons.length; i++) {
+      console.log(buttons[i]);
       buttons[i].addEventListener("click", function (evnt) {
-        var button = evnt.originalTarget;
+        var button = evnt.target;
         var info = button.getAttribute("info");
         var title = button.innerHTML;
         Swal.fire({
