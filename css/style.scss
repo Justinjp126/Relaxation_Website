@@ -464,7 +464,7 @@ p {
   background-color: $bg-blue;
   padding-top: 2rem;
   &__title {
-    color: rgba(#255968, 0.06);
+    color: rgba(#255968, 0.05);
     font-size: 12rem;
     position: absolute;
     top: 0;
@@ -474,7 +474,7 @@ p {
   &__woman {
     position: relative;
     z-index: 10;
-    padding-top: 8rem;
+    padding-top: 6rem;
     &_image {
       width: 90%;
       object-fit: cover;
@@ -912,9 +912,11 @@ p {
   }
   &__exercise {
     background-image: url(/svg/exercise_bg2.svg);
+    filter: grayscale(100%);
   }
   &__yoga {
     background-image: url(/svg/yoga_bg2.svg);
+    filter: grayscale(100%);
   }
   &__meditation {
     background-image: url(/svg/meditation_bg2.svg);
@@ -932,13 +934,15 @@ p {
     cursor: pointer;
     text-decoration: none;
   }
-  &__exercise:hover,
-  &__yoga:hover,
   &__meditation:hover,
-  &__exercise:focus,
-  &__yoga:focus,
   &__meditation:focus {
     top: -5px;
+  }
+  &__exercise:hover,
+  &__yoga:hover,
+  &__exercise:focus,
+  &__yoga:focus {
+    cursor: default;
   }
   &__text {
     color: $off-white;
@@ -985,40 +989,48 @@ p {
     width: 100%;
     text-align: center;
   }
-  .text10:hover {
-    color: darken($dark-blue, 5%);
-    transition: color 200ms ease-in;
-    cursor: default;
+  &__exit {
+    color: $dark-blue;
+    border: 2px solid $dark-blue;
+    text-decoration: none;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    background-color: transparent;
+    transition: all 150ms ease;
+    font-size: 21px !important;
   }
+  &__exit:hover,
+  &__exit:focus {
+    background-color: $dark-blue;
+    color: $off-white;
+    transition: all 200ms ease;
+  }
+
   .text1 {
     animation: fadeInAndOutAnimation 5s linear 10s 1 forwards;
   }
   .text2 {
-    animation: fadeInAndOutAnimation 3s linear 15s 1 forwards;
+    animation: fadeInAndOutAnimation 6s linear 15s 1 forwards;
   }
   .text3 {
-    animation: fadeInAndOutAnimation 6s linear 18s 1 forwards;
+    animation: fadeInAndOutAnimation 5s linear 21s 1 forwards;
   }
   .text4 {
-    animation: fadeInAndOutAnimation 5s linear 24s 1 forwards;
+    animation: fadeInAndOutAnimation 6s linear 26s 1 forwards;
   }
   .text5 {
-    animation: fadeInAndOutAnimation 3s linear 29s 1 forwards;
+    animation: fadeInAndOutAnimation 5s linear 32s 1 forwards;
   }
   .text6 {
-    animation: fadeInAndOutAnimation 6s linear 32s 1 forwards;
+    animation: fadeInAndOutAnimation 6s linear 37s 1 forwards;
   }
   .text7 {
-    animation: fadeInAndOutAnimation 5s linear 38s 1 forwards;
-  }
-  .text8 {
-    animation: fadeInAndOutAnimation 3s linear 43s 1 forwards;
-  }
-  .text9 {
-    animation: fadeInAndOutAnimation 6s linear 46s 1 forwards;
-  }
-  .text10 {
-    animation: fadeInAnimation 3s linear 52s 1 forwards;
+    animation: fadeInAnimation 3s linear 43s 1 forwards;
   }
 
   @keyframes fadeInAnimation {

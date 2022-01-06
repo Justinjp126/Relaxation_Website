@@ -90,8 +90,8 @@ function checkValidContact() {
 
   if (name !== "" && validateEmail(email) && message !== "") {
     Swal.fire({
-      title: "Success!",
-      text: "We will respond to your message as soon as possible!",
+      title: "Sign-Up Successful!",
+      text: "Expect a message in 3-5 days with more information",
       icon: "success",
       confirmButtonText: "Continue",
       iconColor: "#19424e",
