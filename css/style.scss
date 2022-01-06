@@ -813,7 +813,7 @@ p {
 }
 .contact {
   color: white;
-  background-color: $dark-blue;
+  background-color: $blue;
   padding: 1rem;
   width: 50%;
   min-width: 19rem;
@@ -837,8 +837,8 @@ p {
     }
   }
   .form-control {
-    background-color: #14333d;
-    border: 1px solid #14333d;
+    background-color: #194d5d;
+    border: 1px solid #194d5d;
     color: white;
     border-radius: 2rem;
     width: 90%;
@@ -867,7 +867,7 @@ p {
     width: 4rem;
     cursor: pointer;
     text-decoration: none;
-    background-color: #14333d;
+    background-color: #194d5d;
     color: white;
     text-align: center;
     outline: none;
@@ -881,7 +881,7 @@ p {
   &__button:hover,
   &__button:focus {
     color: white;
-    background-color: darken($dark-purple, 5%);
+    background-color: darken(#194d5d, 5%);
     transition: background-color 250ms ease-in;
   }
 }
@@ -930,6 +930,7 @@ p {
     top: 0;
     transition: 300ms ease-in top;
     cursor: pointer;
+    text-decoration: none;
   }
   &__exercise:hover,
   &__yoga:hover,
@@ -943,5 +944,61 @@ p {
     color: $off-white;
     font-weight: $regular;
     font-size: 2rem;
+  }
+}
+
+// !!!!!!!!!!!!!!!!! //
+// !!! Meditation Page !!! //
+// !!!!!!!!!!!!!!!!! //
+.meditationDemo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: blue;
+  &__title {
+    color: $blue;
+    font-size: 5rem;
+    font-weight: $light;
+    animation: fadeInAndOutAnimation ease 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  &__subtitle {
+    color: $blue;
+    font-size: 1rem;
+    font-weight: $light;
+    text-align: center;
+    animation: fadeInAndOutAnimation ease 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOutAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes fadeInAndOutAnimation {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
